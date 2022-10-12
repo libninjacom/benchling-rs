@@ -1,0 +1,2597 @@
+[package]
+name = "benchling"
+edition = "2021"
+version = "0.1.0"
+description = "Benchling client, generated from the OpenAPI spec."
+homepage = "https://github.com/libninjacom/benchling-rs"
+documentation = "https://docs.rs/benchling"
+readme = "README.md"
+license = "MIT"
+repository = "https://github.com/libninjacom/benchling-rs"
+
+[workspace]
+members = []
+
+[dependencies]
+anyhow = "1.0.57"
+httpclient = "0.8.0"
+serde_json = "1.0.81"
+
+[dependencies.serde]
+version = "1.0.137"
+features = ["derive"]
+optional = false
+[dev-dependencies.tokio]
+version = "1.18.2"
+features = ["full"]
+optional = false
+
+[lib]
+path = "src/lib.rs"
+name = "benchling"
+doctest = false
+plugin = false
+proc-macro = false
+edition = "2021"
+crate-type = ["rlib"]
+required-features = []
+
+[[example]]
+path = "examples/abort_assay_results_transaction.rs"
+name = "abort_assay_results_transaction"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/abort_multipart_blob.rs"
+name = "abort_multipart_blob"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/archive_aa_sequences.rs"
+name = "archive_aa_sequences"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/archive_assay_results.rs"
+name = "archive_assay_results"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/archive_assay_runs.rs"
+name = "archive_assay_runs"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/archive_automation_output_processors.rs"
+name = "archive_automation_output_processors"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/archive_batches.rs"
+name = "archive_batches"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/archive_benchling_apps.rs"
+name = "archive_benchling_apps"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/archive_boxes.rs"
+name = "archive_boxes"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/archive_containers.rs"
+name = "archive_containers"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/archive_custom_entities.rs"
+name = "archive_custom_entities"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/archive_dna_oligos.rs"
+name = "archive_dna_oligos"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/archive_dna_sequences.rs"
+name = "archive_dna_sequences"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/archive_dropdown_options.rs"
+name = "archive_dropdown_options"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/archive_entries.rs"
+name = "archive_entries"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/archive_folders.rs"
+name = "archive_folders"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/archive_locations.rs"
+name = "archive_locations"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/archive_mixtures.rs"
+name = "archive_mixtures"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/archive_molecules.rs"
+name = "archive_molecules"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/archive_oligos.rs"
+name = "archive_oligos"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/archive_plates.rs"
+name = "archive_plates"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/archive_projects.rs"
+name = "archive_projects"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/archive_rna_oligos.rs"
+name = "archive_rna_oligos"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/archive_rna_sequences.rs"
+name = "archive_rna_sequences"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/archive_workflow_outputs.rs"
+name = "archive_workflow_outputs"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/archive_workflow_task_groups.rs"
+name = "archive_workflow_task_groups"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/archive_workflow_tasks.rs"
+name = "archive_workflow_tasks"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/auto_annotate_aa_sequences.rs"
+name = "auto_annotate_aa_sequences"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/auto_annotate_dna_sequences.rs"
+name = "auto_annotate_dna_sequences"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/auto_annotate_rna_sequences.rs"
+name = "auto_annotate_rna_sequences"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/autofill_dna_sequence_parts.rs"
+name = "autofill_dna_sequence_parts"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/autofill_dna_sequence_translations.rs"
+name = "autofill_dna_sequence_translations"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/autofill_rna_sequence_parts.rs"
+name = "autofill_rna_sequence_parts"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/autofill_rna_sequence_translations.rs"
+name = "autofill_rna_sequence_translations"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_copy_workflow_tasks.rs"
+name = "bulk_copy_workflow_tasks"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_create_aa_sequences.rs"
+name = "bulk_create_aa_sequences"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_create_containers.rs"
+name = "bulk_create_containers"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_create_custom_entities.rs"
+name = "bulk_create_custom_entities"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_create_dna_oligos.rs"
+name = "bulk_create_dna_oligos"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_create_dna_sequences.rs"
+name = "bulk_create_dna_sequences"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_create_features.rs"
+name = "bulk_create_features"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_create_mixtures.rs"
+name = "bulk_create_mixtures"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_create_molecules.rs"
+name = "bulk_create_molecules"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_create_oligos.rs"
+name = "bulk_create_oligos"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_create_request_tasks.rs"
+name = "bulk_create_request_tasks"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_create_rna_oligos.rs"
+name = "bulk_create_rna_oligos"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_create_rna_sequences.rs"
+name = "bulk_create_rna_sequences"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_create_workflow_outputs.rs"
+name = "bulk_create_workflow_outputs"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_create_workflow_tasks.rs"
+name = "bulk_create_workflow_tasks"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_get_aa_sequences.rs"
+name = "bulk_get_aa_sequences"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_get_assay_results.rs"
+name = "bulk_get_assay_results"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_get_assay_runs.rs"
+name = "bulk_get_assay_runs"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_get_batches.rs"
+name = "bulk_get_batches"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_get_blobs.rs"
+name = "bulk_get_blobs"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_get_boxes.rs"
+name = "bulk_get_boxes"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_get_containers.rs"
+name = "bulk_get_containers"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_get_custom_entities.rs"
+name = "bulk_get_custom_entities"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_get_dna_sequences.rs"
+name = "bulk_get_dna_sequences"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_get_entries.rs"
+name = "bulk_get_entries"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_get_locations.rs"
+name = "bulk_get_locations"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_get_oligos.rs"
+name = "bulk_get_oligos"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_get_plates.rs"
+name = "bulk_get_plates"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_get_registered_entities.rs"
+name = "bulk_get_registered_entities"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_get_requests.rs"
+name = "bulk_get_requests"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_get_rna_sequences.rs"
+name = "bulk_get_rna_sequences"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_update_aa_sequences.rs"
+name = "bulk_update_aa_sequences"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_update_containers.rs"
+name = "bulk_update_containers"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_update_custom_entities.rs"
+name = "bulk_update_custom_entities"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_update_dna_oligos.rs"
+name = "bulk_update_dna_oligos"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_update_dna_sequences.rs"
+name = "bulk_update_dna_sequences"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_update_mixtures.rs"
+name = "bulk_update_mixtures"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_update_molecules.rs"
+name = "bulk_update_molecules"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_update_request_tasks.rs"
+name = "bulk_update_request_tasks"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_update_rna_oligos.rs"
+name = "bulk_update_rna_oligos"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_update_rna_sequences.rs"
+name = "bulk_update_rna_sequences"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_update_workflow_outputs.rs"
+name = "bulk_update_workflow_outputs"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/bulk_update_workflow_tasks.rs"
+name = "bulk_update_workflow_tasks"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/checkin_containers.rs"
+name = "checkin_containers"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/checkout_containers.rs"
+name = "checkout_containers"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/commit_assay_results_transaction.rs"
+name = "commit_assay_results_transaction"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/complete_multipart_blob.rs"
+name = "complete_multipart_blob"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/copy_workflow_task.rs"
+name = "copy_workflow_task"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_aa_sequence.rs"
+name = "create_aa_sequence"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_assay_results.rs"
+name = "create_assay_results"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_assay_results_in_transaction.rs"
+name = "create_assay_results_in_transaction"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_assay_results_transaction.rs"
+name = "create_assay_results_transaction"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_assay_runs.rs"
+name = "create_assay_runs"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_automation_output_processor.rs"
+name = "create_automation_output_processor"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_batch.rs"
+name = "create_batch"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_benchling_app.rs"
+name = "create_benchling_app"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_blob.rs"
+name = "create_blob"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_blob_part.rs"
+name = "create_blob_part"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_box.rs"
+name = "create_box"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_consensus_nucleotide_alignment.rs"
+name = "create_consensus_nucleotide_alignment"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_container.rs"
+name = "create_container"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_custom_entity.rs"
+name = "create_custom_entity"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_dna_consensus_alignment.rs"
+name = "create_dna_consensus_alignment"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_dna_oligo.rs"
+name = "create_dna_oligo"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_dna_sequence.rs"
+name = "create_dna_sequence"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_dna_template_alignment.rs"
+name = "create_dna_template_alignment"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_dropdown.rs"
+name = "create_dropdown"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_entry.rs"
+name = "create_entry"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_feature.rs"
+name = "create_feature"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_feature_library.rs"
+name = "create_feature_library"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_folder.rs"
+name = "create_folder"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_location.rs"
+name = "create_location"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_mixture.rs"
+name = "create_mixture"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_molecule.rs"
+name = "create_molecule"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_multipart_blob.rs"
+name = "create_multipart_blob"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_oligo.rs"
+name = "create_oligo"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_plate.rs"
+name = "create_plate"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_request.rs"
+name = "create_request"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_rna_oligo.rs"
+name = "create_rna_oligo"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_rna_sequence.rs"
+name = "create_rna_sequence"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_template_nucleotide_alignment.rs"
+name = "create_template_nucleotide_alignment"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_warehouse_credentials.rs"
+name = "create_warehouse_credentials"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_workflow_output.rs"
+name = "create_workflow_output"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_workflow_task.rs"
+name = "create_workflow_task"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_workflow_task_group.rs"
+name = "create_workflow_task_group"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/delete_container_content.rs"
+name = "delete_container_content"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/delete_dna_alignment.rs"
+name = "delete_dna_alignment"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/delete_nucleotide_alignment.rs"
+name = "delete_nucleotide_alignment"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/execute_requests_sample_groups.rs"
+name = "execute_requests_sample_groups"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/export_item.rs"
+name = "export_item"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/generate_input_with_automation_input_generator.rs"
+name = "generate_input_with_automation_input_generator"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/generate_token.rs"
+name = "generate_token"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_aa_sequence.rs"
+name = "get_aa_sequence"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_assay_result.rs"
+name = "get_assay_result"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_assay_run.rs"
+name = "get_assay_run"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_automation_input_generator.rs"
+name = "get_automation_input_generator"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_automation_output_processor.rs"
+name = "get_automation_output_processor"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_batch.rs"
+name = "get_batch"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_batch_schema.rs"
+name = "get_batch_schema"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_benchling_app_by_id.rs"
+name = "get_benchling_app_by_id"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_blob.rs"
+name = "get_blob"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_blob_url.rs"
+name = "get_blob_url"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_box.rs"
+name = "get_box"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_box_schema.rs"
+name = "get_box_schema"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_container.rs"
+name = "get_container"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_container_content.rs"
+name = "get_container_content"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_container_schema.rs"
+name = "get_container_schema"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_custom_entity.rs"
+name = "get_custom_entity"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_dna_alignment.rs"
+name = "get_dna_alignment"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_dna_oligo.rs"
+name = "get_dna_oligo"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_dna_sequence.rs"
+name = "get_dna_sequence"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_dropdown.rs"
+name = "get_dropdown"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_enitity_batches.rs"
+name = "get_enitity_batches"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_entity_schema.rs"
+name = "get_entity_schema"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_entry.rs"
+name = "get_entry"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_entry_schema.rs"
+name = "get_entry_schema"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_entry_template.rs"
+name = "get_entry_template"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_external_file_metadata.rs"
+name = "get_external_file_metadata"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_feature.rs"
+name = "get_feature"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_feature_library.rs"
+name = "get_feature_library"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_folder.rs"
+name = "get_folder"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_lab_automation_transform.rs"
+name = "get_lab_automation_transform"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_location.rs"
+name = "get_location"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_location_schema.rs"
+name = "get_location_schema"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_mixture.rs"
+name = "get_mixture"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_molecule.rs"
+name = "get_molecule"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_nucleotide_alignment.rs"
+name = "get_nucleotide_alignment"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_oligo.rs"
+name = "get_oligo"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_organization.rs"
+name = "get_organization"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_plate.rs"
+name = "get_plate"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_plate_schema.rs"
+name = "get_plate_schema"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_project.rs"
+name = "get_project"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_registry.rs"
+name = "get_registry"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_request.rs"
+name = "get_request"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_request_fulfillment.rs"
+name = "get_request_fulfillment"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_request_response.rs"
+name = "get_request_response"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_request_schema.rs"
+name = "get_request_schema"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_request_task_schema.rs"
+name = "get_request_task_schema"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_result_schema.rs"
+name = "get_result_schema"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_rna_oligo.rs"
+name = "get_rna_oligo"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_rna_sequence.rs"
+name = "get_rna_sequence"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_run_schema.rs"
+name = "get_run_schema"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_task.rs"
+name = "get_task"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_team.rs"
+name = "get_team"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_user.rs"
+name = "get_user"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_workflow_output.rs"
+name = "get_workflow_output"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_workflow_task.rs"
+name = "get_workflow_task"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_workflow_task_group.rs"
+name = "get_workflow_task_group"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_workflow_task_schema.rs"
+name = "get_workflow_task_schema"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_aa_sequences.rs"
+name = "list_aa_sequences"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_assay_result_schemas.rs"
+name = "list_assay_result_schemas"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_assay_results.rs"
+name = "list_assay_results"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_assay_run_schemas.rs"
+name = "list_assay_run_schemas"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_assay_runs.rs"
+name = "list_assay_runs"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_automation_input_generators.rs"
+name = "list_automation_input_generators"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_automation_output_processors.rs"
+name = "list_automation_output_processors"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_automation_output_processors_deprecated.rs"
+name = "list_automation_output_processors_deprecated"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_batch_schemas.rs"
+name = "list_batch_schemas"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_batch_schemas_by_registry.rs"
+name = "list_batch_schemas_by_registry"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_batches.rs"
+name = "list_batches"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_benchling_apps.rs"
+name = "list_benchling_apps"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_box_contents.rs"
+name = "list_box_contents"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_box_schemas.rs"
+name = "list_box_schemas"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_box_schemas_by_registry.rs"
+name = "list_box_schemas_by_registry"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_boxes.rs"
+name = "list_boxes"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_container_contents.rs"
+name = "list_container_contents"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_container_schemas.rs"
+name = "list_container_schemas"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_container_schemas_by_registry.rs"
+name = "list_container_schemas_by_registry"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_containers.rs"
+name = "list_containers"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_custom_entities.rs"
+name = "list_custom_entities"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_dna_alignments.rs"
+name = "list_dna_alignments"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_dna_oligos.rs"
+name = "list_dna_oligos"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_dna_sequences.rs"
+name = "list_dna_sequences"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_dropdowns.rs"
+name = "list_dropdowns"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_dropdowns_by_registry.rs"
+name = "list_dropdowns_by_registry"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_entity_schemas.rs"
+name = "list_entity_schemas"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_entity_schemas_by_registry.rs"
+name = "list_entity_schemas_by_registry"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_entries.rs"
+name = "list_entries"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_entry_schemas.rs"
+name = "list_entry_schemas"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_entry_templates.rs"
+name = "list_entry_templates"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_events.rs"
+name = "list_events"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_feature_libraries.rs"
+name = "list_feature_libraries"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_features.rs"
+name = "list_features"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_folders.rs"
+name = "list_folders"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_label_templates.rs"
+name = "list_label_templates"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_legacy_workflow_stage_run_input_samples.rs"
+name = "list_legacy_workflow_stage_run_input_samples"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_legacy_workflow_stage_run_output_samples.rs"
+name = "list_legacy_workflow_stage_run_output_samples"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_legacy_workflow_stage_run_registered_samples.rs"
+name = "list_legacy_workflow_stage_run_registered_samples"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_legacy_workflow_stage_runs.rs"
+name = "list_legacy_workflow_stage_runs"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_legacy_workflow_stages.rs"
+name = "list_legacy_workflow_stages"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_legacy_workflows.rs"
+name = "list_legacy_workflows"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_location_schemas.rs"
+name = "list_location_schemas"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_location_schemas_by_registry.rs"
+name = "list_location_schemas_by_registry"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_locations.rs"
+name = "list_locations"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_mixtures.rs"
+name = "list_mixtures"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_molecules.rs"
+name = "list_molecules"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_nucleotide_alignments.rs"
+name = "list_nucleotide_alignments"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_oligos.rs"
+name = "list_oligos"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_organizations.rs"
+name = "list_organizations"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_plate_schemas.rs"
+name = "list_plate_schemas"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_plate_schemas_by_registry.rs"
+name = "list_plate_schemas_by_registry"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_plates.rs"
+name = "list_plates"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_printers.rs"
+name = "list_printers"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_projects.rs"
+name = "list_projects"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_registries.rs"
+name = "list_registries"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_request_fulfillments.rs"
+name = "list_request_fulfillments"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_request_schemas.rs"
+name = "list_request_schemas"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_request_task_schemas.rs"
+name = "list_request_task_schemas"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_requests.rs"
+name = "list_requests"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_rna_oligos.rs"
+name = "list_rna_oligos"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_rna_sequences.rs"
+name = "list_rna_sequences"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_stage_run_input_samples.rs"
+name = "list_stage_run_input_samples"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_stage_run_output_samples.rs"
+name = "list_stage_run_output_samples"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_stage_run_registered_samples.rs"
+name = "list_stage_run_registered_samples"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_teams.rs"
+name = "list_teams"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_users.rs"
+name = "list_users"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_workflow_outputs.rs"
+name = "list_workflow_outputs"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_workflow_stage_runs.rs"
+name = "list_workflow_stage_runs"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_workflow_stages.rs"
+name = "list_workflow_stages"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_workflow_task_groups.rs"
+name = "list_workflow_task_groups"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_workflow_task_schemas.rs"
+name = "list_workflow_task_schemas"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_workflow_tasks.rs"
+name = "list_workflow_tasks"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_workflows.rs"
+name = "list_workflows"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/patch_benchling_app.rs"
+name = "patch_benchling_app"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/patch_request.rs"
+name = "patch_request"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/print_labels.rs"
+name = "print_labels"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/process_output_with_automation_output_processor.rs"
+name = "process_output_with_automation_output_processor"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/register_entities.rs"
+name = "register_entities"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/reserve_containers.rs"
+name = "reserve_containers"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/transfer_into_container.rs"
+name = "transfer_into_container"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/transfer_into_containers.rs"
+name = "transfer_into_containers"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/unarchive_aa_sequences.rs"
+name = "unarchive_aa_sequences"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/unarchive_assay_results.rs"
+name = "unarchive_assay_results"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/unarchive_assay_runs.rs"
+name = "unarchive_assay_runs"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/unarchive_automation_output_processors.rs"
+name = "unarchive_automation_output_processors"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/unarchive_batches.rs"
+name = "unarchive_batches"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/unarchive_benchling_apps.rs"
+name = "unarchive_benchling_apps"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/unarchive_boxes.rs"
+name = "unarchive_boxes"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/unarchive_containers.rs"
+name = "unarchive_containers"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/unarchive_custom_entities.rs"
+name = "unarchive_custom_entities"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/unarchive_dna_oligos.rs"
+name = "unarchive_dna_oligos"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/unarchive_dna_sequences.rs"
+name = "unarchive_dna_sequences"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/unarchive_dropdown_options.rs"
+name = "unarchive_dropdown_options"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/unarchive_entries.rs"
+name = "unarchive_entries"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/unarchive_folders.rs"
+name = "unarchive_folders"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/unarchive_locations.rs"
+name = "unarchive_locations"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/unarchive_mixtures.rs"
+name = "unarchive_mixtures"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/unarchive_molecules.rs"
+name = "unarchive_molecules"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/unarchive_oligos.rs"
+name = "unarchive_oligos"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/unarchive_plates.rs"
+name = "unarchive_plates"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/unarchive_projects.rs"
+name = "unarchive_projects"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/unarchive_rna_oligos.rs"
+name = "unarchive_rna_oligos"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/unarchive_rna_sequences.rs"
+name = "unarchive_rna_sequences"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/unarchive_workflow_outputs.rs"
+name = "unarchive_workflow_outputs"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/unarchive_workflow_task_groups.rs"
+name = "unarchive_workflow_task_groups"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/unarchive_workflow_tasks.rs"
+name = "unarchive_workflow_tasks"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/unregister_entities.rs"
+name = "unregister_entities"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_aa_sequence.rs"
+name = "update_aa_sequence"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_assay_run.rs"
+name = "update_assay_run"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_automation_input_generator.rs"
+name = "update_automation_input_generator"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_automation_output_processor.rs"
+name = "update_automation_output_processor"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_batch.rs"
+name = "update_batch"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_box.rs"
+name = "update_box"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_container.rs"
+name = "update_container"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_container_content.rs"
+name = "update_container_content"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_custom_entity.rs"
+name = "update_custom_entity"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_dna_oligo.rs"
+name = "update_dna_oligo"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_dna_sequence.rs"
+name = "update_dna_sequence"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_dropdown.rs"
+name = "update_dropdown"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_entry.rs"
+name = "update_entry"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_feature.rs"
+name = "update_feature"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_feature_library.rs"
+name = "update_feature_library"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_lab_automation_transform.rs"
+name = "update_lab_automation_transform"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_legacy_workflow_metadata.rs"
+name = "update_legacy_workflow_metadata"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_location.rs"
+name = "update_location"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_mixture.rs"
+name = "update_mixture"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_molecule.rs"
+name = "update_molecule"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_oligo.rs"
+name = "update_oligo"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_plate.rs"
+name = "update_plate"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_rna_oligo.rs"
+name = "update_rna_oligo"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_rna_sequence.rs"
+name = "update_rna_sequence"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_workflow_metadata.rs"
+name = "update_workflow_metadata"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_workflow_output.rs"
+name = "update_workflow_output"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_workflow_task.rs"
+name = "update_workflow_task"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_workflow_task_group.rs"
+name = "update_workflow_task_group"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/validate_barcodes.rs"
+name = "validate_barcodes"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
