@@ -6,10 +6,10 @@ use benchling::request::CreateDnaTemplateAlignmentRequired;
 async fn main() {
     let client = BenchlingClient::from_env();
     let args = CreateDnaTemplateAlignmentRequired {
-        name: "your name",
         algorithm: "your algorithm",
-        template_sequence_id: "your template sequence id",
         files: vec![::serde_json::json!({})],
+        name: "your name",
+        template_sequence_id: "your template sequence id",
     };
     let response = client.create_dna_template_alignment(args).send().await.unwrap();
     println!("{:#?}", response);

@@ -17,13 +17,14 @@ async fn main() {
         .ingredients(
             vec![
                 IngredientWriteParams { units : Some("your units".to_owned()), amount :
-                Some("your amount".to_owned()), component_lot_entity_id :
-                Some("your component lot entity id".to_owned()), component_lot_text :
-                Some("your component lot text".to_owned()), component_entity_id :
-                "your component entity id".to_owned(), catalog_identifier :
-                Some("your catalog identifier".to_owned()), notes : Some("your notes"
+                Some("your amount".to_owned()), component_lot_text :
+                Some("your component lot text".to_owned()), notes : Some("your notes"
+                .to_owned()), component_entity_id : "your component entity id"
+                .to_owned(), catalog_identifier : Some("your catalog identifier"
                 .to_owned()), component_lot_container_id :
-                Some("your component lot container id".to_owned()) }
+                Some("your component lot container id".to_owned()),
+                component_lot_entity_id : Some("your component lot entity id".to_owned())
+                }
             ],
         )
         .name("your name")

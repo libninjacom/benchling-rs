@@ -8,32 +8,38 @@ async fn main() {
         .bulk_create_rna_sequences()
         .rna_sequences(
             vec![
-                RnaSequenceBulkCreate(RnaSequenceCreate(RnaSequenceBaseRequestForCreate(RnaSequenceBaseRequest
-                { annotations : Some(vec![RnaAnnotation(SequenceFeatureBase {
-                custom_fields : Some(vec![SequenceFeatureCustomField { value :
-                Some("your value".to_owned()), name : Some("your name".to_owned()) }]),
-                notes : Some("your notes".to_owned()), color : Some("your color"
-                .to_owned()), name : Some("your name".to_owned()) },
-                ::serde_json::json!({}))]), author_ids : Some(vec!["your author ids"
-                .to_owned()]), fields : Some(Fields {}), is_circular : Some(true), name :
-                Some("your name".to_owned()), custom_fields : Some(CustomFields {}),
-                translations : Some(vec![Translation(SequenceFeatureBase { custom_fields
-                : Some(vec![SequenceFeatureCustomField { value : Some("your value"
-                .to_owned()), name : Some("your name".to_owned()) }]), notes :
-                Some("your notes".to_owned()), color : Some("your color".to_owned()),
-                name : Some("your name".to_owned()) }, ::serde_json::json!({}))]), bases
-                : Some("your bases".to_owned()), folder_id : Some("your folder id"
-                .to_owned()), aliases : Some(vec!["your aliases".to_owned()]), primers :
-                Some(vec![Primer { start : Some(1), color : Some("your color"
-                .to_owned()), oligo_id : Some("your oligo id".to_owned()), strand :
-                Some(1), name : Some("your name".to_owned()), bases : Some("your bases"
-                .to_owned()), bind_position : Some(1), end : Some(1), overhang_length :
-                Some(1) }]), schema_id : Some("your schema id".to_owned()) },
-                ::serde_json::json!({})), CreateEntityIntoRegistry { entity_registry_id :
-                Some("your entity registry id".to_owned()), folder_id :
+                RnaSequenceBulkCreate { rna_sequence_create : RnaSequenceCreate {
+                rna_sequence_base_request_for_create : RnaSequenceBaseRequestForCreate {
+                rna_sequence_base_request : RnaSequenceBaseRequest { name :
+                Some("your name".to_owned()), annotations : Some(vec![RnaAnnotation { end
+                : 1, type_ : "your type".to_owned(), strand : 1, sequence_feature_base :
+                SequenceFeatureBase { custom_fields :
+                Some(vec![SequenceFeatureCustomField { name : Some("your name"
+                .to_owned()), value : Some("your value".to_owned()) }]), color :
+                Some("your color".to_owned()), name : Some("your name".to_owned()), notes
+                : Some("your notes".to_owned()) }, start : 1 }]), bases :
+                Some("your bases".to_owned()), custom_fields : Some(CustomFields {}),
+                is_circular : Some(true), aliases : Some(vec!["your aliases"
+                .to_owned()]), author_ids : Some(vec!["your author ids".to_owned()]),
+                fields : Some(Fields {}), folder_id : Some("your folder id".to_owned()),
+                primers : Some(vec![Primer { bases : Some("your bases".to_owned()), color
+                : Some("your color".to_owned()), end : Some(1), name : Some("your name"
+                .to_owned()), oligo_id : Some("your oligo id".to_owned()),
+                overhang_length : Some(1), bind_position : Some(1), start : Some(1),
+                strand : Some(1) }]), schema_id : Some("your schema id".to_owned()),
+                translations : Some(vec![Translation { strand : 1, regions :
+                vec![::serde_json::json!({})], start : 1, end : 1, sequence_feature_base
+                : SequenceFeatureBase { custom_fields :
+                Some(vec![SequenceFeatureCustomField { name : Some("your name"
+                .to_owned()), value : Some("your value".to_owned()) }]), color :
+                Some("your color".to_owned()), name : Some("your name".to_owned()), notes
+                : Some("your notes".to_owned()) }, genetic_code : "your genetic code"
+                .to_owned(), amino_acids : "your amino acids".to_owned() }]) } },
+                create_entity_into_registry : CreateEntityIntoRegistry {
+                entity_registry_id : Some("your entity registry id".to_owned()),
+                naming_strategy : Some("your naming strategy".to_owned()), folder_id :
                 Some("your folder id".to_owned()), registry_id : Some("your registry id"
-                .to_owned()), naming_strategy : Some("your naming strategy".to_owned())
-                }))
+                .to_owned()) } } }
             ],
         )
         .send()

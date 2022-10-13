@@ -6,10 +6,10 @@ use benchling::request::CreateBlobRequired;
 async fn main() {
     let client = BenchlingClient::from_env();
     let args = CreateBlobRequired {
-        data64: "your data 64",
         name: "your name",
-        type_: "your type",
         md5: "your md 5",
+        data64: "your data 64",
+        type_: "your type",
     };
     let response = client
         .create_blob(args)

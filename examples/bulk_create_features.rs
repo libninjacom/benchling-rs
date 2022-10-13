@@ -6,7 +6,7 @@ async fn main() {
     let client = BenchlingClient::from_env();
     let response = client
         .bulk_create_features()
-        .features(vec![FeatureBulkCreate(FeatureCreate {})])
+        .features(vec![FeatureBulkCreate { feature_create : FeatureCreate {} }])
         .send()
         .await
         .unwrap();

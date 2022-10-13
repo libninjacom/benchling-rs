@@ -8,32 +8,38 @@ async fn main() {
         .bulk_create_dna_sequences()
         .dna_sequences(
             vec![
-                DnaSequenceBulkCreate(DnaSequenceCreate(DnaSequenceBaseRequestForCreate(DnaSequenceBaseRequest
-                { name : Some("your name".to_owned()), schema_id : Some("your schema id"
-                .to_owned()), bases : Some("your bases".to_owned()), folder_id :
-                Some("your folder id".to_owned()), is_circular : Some(true), annotations
-                : Some(vec![DnaAnnotation(SequenceFeatureBase { custom_fields :
-                Some(vec![SequenceFeatureCustomField { value : Some("your value"
-                .to_owned()), name : Some("your name".to_owned()) }]), notes :
-                Some("your notes".to_owned()), color : Some("your color".to_owned()),
-                name : Some("your name".to_owned()) }, ::serde_json::json!({}))]),
-                primers : Some(vec![Primer { start : Some(1), color : Some("your color"
-                .to_owned()), oligo_id : Some("your oligo id".to_owned()), strand :
-                Some(1), name : Some("your name".to_owned()), bases : Some("your bases"
-                .to_owned()), bind_position : Some(1), end : Some(1), overhang_length :
-                Some(1) }]), translations : Some(vec![Translation(SequenceFeatureBase {
-                custom_fields : Some(vec![SequenceFeatureCustomField { value :
-                Some("your value".to_owned()), name : Some("your name".to_owned()) }]),
-                notes : Some("your notes".to_owned()), color : Some("your color"
-                .to_owned()), name : Some("your name".to_owned()) },
-                ::serde_json::json!({}))]), custom_fields : Some(CustomFields {}),
-                aliases : Some(vec!["your aliases".to_owned()]), fields : Some(Fields
-                {}), author_ids : Some(vec!["your author ids".to_owned()]) },
-                ::serde_json::json!({})), CreateEntityIntoRegistry { entity_registry_id :
-                Some("your entity registry id".to_owned()), folder_id :
+                DnaSequenceBulkCreate { dna_sequence_create : DnaSequenceCreate {
+                create_entity_into_registry : CreateEntityIntoRegistry {
+                entity_registry_id : Some("your entity registry id".to_owned()),
+                naming_strategy : Some("your naming strategy".to_owned()), folder_id :
                 Some("your folder id".to_owned()), registry_id : Some("your registry id"
-                .to_owned()), naming_strategy : Some("your naming strategy".to_owned())
-                }))
+                .to_owned()) }, dna_sequence_base_request_for_create :
+                DnaSequenceBaseRequestForCreate { dna_sequence_base_request :
+                DnaSequenceBaseRequest { is_circular : Some(true), fields : Some(Fields
+                {}), bases : Some("your bases".to_owned()), annotations :
+                Some(vec![DnaAnnotation { start : 1, sequence_feature_base :
+                SequenceFeatureBase { custom_fields :
+                Some(vec![SequenceFeatureCustomField { name : Some("your name"
+                .to_owned()), value : Some("your value".to_owned()) }]), color :
+                Some("your color".to_owned()), name : Some("your name".to_owned()), notes
+                : Some("your notes".to_owned()) }, strand : 1, type_ : "your type"
+                .to_owned(), end : 1 }]), aliases : Some(vec!["your aliases"
+                .to_owned()]), primers : Some(vec![Primer { bases : Some("your bases"
+                .to_owned()), color : Some("your color".to_owned()), end : Some(1), name
+                : Some("your name".to_owned()), oligo_id : Some("your oligo id"
+                .to_owned()), overhang_length : Some(1), bind_position : Some(1), start :
+                Some(1), strand : Some(1) }]), folder_id : Some("your folder id"
+                .to_owned()), translations : Some(vec![Translation { strand : 1, regions
+                : vec![::serde_json::json!({})], start : 1, end : 1,
+                sequence_feature_base : SequenceFeatureBase { custom_fields :
+                Some(vec![SequenceFeatureCustomField { name : Some("your name"
+                .to_owned()), value : Some("your value".to_owned()) }]), color :
+                Some("your color".to_owned()), name : Some("your name".to_owned()), notes
+                : Some("your notes".to_owned()) }, genetic_code : "your genetic code"
+                .to_owned(), amino_acids : "your amino acids".to_owned() }]), schema_id :
+                Some("your schema id".to_owned()), custom_fields : Some(CustomFields {}),
+                author_ids : Some(vec!["your author ids".to_owned()]), name :
+                Some("your name".to_owned()) } } } }
             ],
         )
         .send()

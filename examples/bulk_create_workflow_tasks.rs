@@ -8,8 +8,10 @@ async fn main() {
         .bulk_create_workflow_tasks()
         .workflow_tasks(
             vec![
-                WorkflowTaskBulkCreate(WorkflowTaskCreate(WorkflowTaskWriteBase(::serde_json::json!({})),
-                ::serde_json::json!({})))
+                WorkflowTaskBulkCreate { workflow_task_create : WorkflowTaskCreate {
+                workflow_task_write_base :
+                WorkflowTaskWriteBase(::serde_json::json!({})), workflow_task_group_id :
+                "your workflow task group id".to_owned() } }
             ],
         )
         .send()

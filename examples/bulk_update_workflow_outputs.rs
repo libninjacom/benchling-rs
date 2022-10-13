@@ -8,8 +8,9 @@ async fn main() {
         .bulk_update_workflow_outputs()
         .workflow_outputs(
             vec![
-                WorkflowOutputBulkUpdate(WorkflowOutputWriteBase(::serde_json::json!({})),
-                ::serde_json::json!({}))
+                WorkflowOutputBulkUpdate { workflow_output_write_base :
+                WorkflowOutputWriteBase(::serde_json::json!({})), workflow_output_id :
+                "your workflow output id".to_owned() }
             ],
         )
         .send()

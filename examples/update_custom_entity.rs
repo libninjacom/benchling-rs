@@ -6,15 +6,15 @@ use benchling::request::UpdateCustomEntityRequired;
 async fn main() {
     let client = BenchlingClient::from_env();
     let args = UpdateCustomEntityRequired {
-        folder_id: "your folder id",
         author_ids: &["your author ids"],
-        name: "your name",
-        entity_registry_id: "your entity registry id",
-        custom_entity_id: "your custom entity id",
         custom_fields: CustomFields {},
-        aliases: &["your aliases"],
-        schema_id: "your schema id",
         fields: Fields {},
+        entity_registry_id: "your entity registry id",
+        name: "your name",
+        folder_id: "your folder id",
+        aliases: &["your aliases"],
+        custom_entity_id: "your custom entity id",
+        schema_id: "your schema id",
     };
     let response = client.update_custom_entity(args).send().await.unwrap();
     println!("{:#?}", response);

@@ -37,7 +37,6 @@ impl BenchlingClient {
         mut r: httpclient::RequestBuilder<'a>,
     ) -> httpclient::RequestBuilder<'a> {
         match &self.authentication {
-            BenchlingAuthentication::OAuth {} => {}
             BenchlingAuthentication::BasicApiKeyAuth { basic_api_key_auth } => {
                 r = r.basic_auth(basic_api_key_auth);
             }
@@ -4093,11 +4092,13 @@ Update workflow metadata*/
     }
 }
 pub enum BenchlingAuthentication {
-    OAuth { o_auth: String },
     BasicApiKeyAuth { basic_api_key_auth: String },
 }
 impl BenchlingAuthentication {
     pub fn from_env() -> Self {
-        Self::OAuth {}
+        Self::BasicApiKeyAuth {
+            basic_api_key_auth: std::env::var("BENCHLING_BASIC_API_KEY_AUTH")
+                .expect("Environment variable BENCHLING_BASIC_API_KEY_AUTH is not set."),
+        }
     }
 }

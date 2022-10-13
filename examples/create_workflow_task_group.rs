@@ -6,9 +6,9 @@ use benchling::request::CreateWorkflowTaskGroupRequired;
 async fn main() {
     let client = BenchlingClient::from_env();
     let args = CreateWorkflowTaskGroupRequired {
+        folder_id: "your folder id",
         schema_id: "your schema id",
         watcher_ids: &["your watcher ids"],
-        folder_id: "your folder id",
         name: "your name",
     };
     let response = client.create_workflow_task_group(args).send().await.unwrap();

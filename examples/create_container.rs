@@ -8,9 +8,9 @@ async fn main() {
     let args = CreateContainerRequired {
         parent_storage_id: "your parent storage id",
         barcode: "your barcode",
+        fields: Fields {},
         name: "your name",
         schema_id: "your schema id",
-        fields: Fields {},
     };
     let response = client
         .create_container(args)
