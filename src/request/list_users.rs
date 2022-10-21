@@ -15,6 +15,7 @@ pub struct ListUsersRequest<'a> {
     pub member_of: Option<String>,
     pub admin_of: Option<String>,
     pub handles: Option<String>,
+    pub password_last_changed_at: Option<String>,
     pub page_size: Option<i64>,
     pub next_token: Option<String>,
     pub sort: Option<String>,
@@ -48,6 +49,9 @@ impl<'a> ListUsersRequest<'a> {
         }
         if let Some(ref unwrapped) = self.handles {
             r = r.push_query("handles", &unwrapped.to_string());
+        }
+        if let Some(ref unwrapped) = self.password_last_changed_at {
+            r = r.push_query("passwordLastChangedAt", &unwrapped.to_string());
         }
         if let Some(ref unwrapped) = self.page_size {
             r = r.push_query("pageSize", &unwrapped.to_string());
@@ -105,6 +109,10 @@ impl<'a> ListUsersRequest<'a> {
     }
     pub fn handles(mut self, handles: &str) -> Self {
         self.handles = Some(handles.to_owned());
+        self
+    }
+    pub fn password_last_changed_at(mut self, password_last_changed_at: &str) -> Self {
+        self.password_last_changed_at = Some(password_last_changed_at.to_owned());
         self
     }
     pub fn page_size(mut self, page_size: i64) -> Self {

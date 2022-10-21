@@ -15,6 +15,7 @@ async fn main() {
         .member_of("your member of")
         .admin_of("your admin of")
         .handles("your handles")
+        .password_last_changed_at("your password last changed at")
         .page_size(1)
         .next_token("your next token")
         .sort("your sort")

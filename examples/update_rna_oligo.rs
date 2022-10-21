@@ -6,15 +6,15 @@ use benchling::request::UpdateRnaOligoRequired;
 async fn main() {
     let client = BenchlingClient::from_env();
     let args = UpdateRnaOligoRequired {
-        custom_fields: CustomFields {},
-        fields: Fields {},
-        schema_id: "your schema id",
-        folder_id: "your folder id",
-        aliases: &["your aliases"],
-        oligo_id: "your oligo id",
-        author_ids: &["your author ids"],
         bases: "your bases",
+        schema_id: "your schema id",
+        oligo_id: "your oligo id",
+        fields: Fields {},
+        author_ids: &["your author ids"],
+        folder_id: "your folder id",
         name: "your name",
+        custom_fields: CustomFields {},
+        aliases: &["your aliases"],
     };
     let response = client.update_rna_oligo(args).send().await.unwrap();
     println!("{:#?}", response);

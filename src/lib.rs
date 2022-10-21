@@ -3646,6 +3646,7 @@ Returns all users that the caller has permission to view. The following roles ha
             member_of: None,
             admin_of: None,
             handles: None,
+            password_last_changed_at: None,
             page_size: None,
             next_token: None,
             sort: None,

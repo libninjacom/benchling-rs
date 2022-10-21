@@ -6,15 +6,15 @@ use benchling::request::PatchRequestRequired;
 async fn main() {
     let client = BenchlingClient::from_env();
     let args = PatchRequestRequired {
-        project_id: "your project id",
-        request_id: "your request id",
+        fields: Fields {},
         sample_groups: vec![
             RequestSampleGroupCreate { samples : RequestSampleGroupSamples {} }
         ],
+        assignees: vec![::serde_json::json!({})],
+        request_id: "your request id",
         scheduled_on: "your scheduled on",
         request_status: "your request status",
-        fields: Fields {},
-        assignees: vec![::serde_json::json!({})],
+        project_id: "your project id",
     };
     let response = client
         .patch_request(args)

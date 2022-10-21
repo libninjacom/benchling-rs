@@ -8,16 +8,17 @@ async fn main() {
         .bulk_update_aa_sequences()
         .aa_sequences(
             vec![
-                AaSequenceBulkUpdate { aa_sequence_base_request : AaSequenceBaseRequest {
-                name : Some("your name".to_owned()), schema_id : Some("your schema id"
-                .to_owned()), author_ids : Some(vec!["your author ids".to_owned()]),
-                custom_fields : Some(CustomFields {}), annotations :
-                Some(vec![AaAnnotation { color : Some("your color".to_owned()), end :
-                Some(1), name : Some("your name".to_owned()), id : Some("your id"
-                .to_owned()), type_ : Some("your type".to_owned()), start : Some(1) }]),
-                fields : Some(Fields {}), amino_acids : Some("your amino acids"
-                .to_owned()), folder_id : Some("your folder id".to_owned()), aliases :
-                Some(vec!["your aliases".to_owned()]) }, id : "your id".to_owned() }
+                AaSequenceBulkUpdate { id : "your id".to_owned(),
+                aa_sequence_base_request : AaSequenceBaseRequest { name :
+                Some("your name".to_owned()), annotations : Some(vec![AaAnnotation { end
+                : Some(1), start : Some(1), name : Some("your name".to_owned()), type_ :
+                Some("your type".to_owned()), id : Some("your id".to_owned()), color :
+                Some("your color".to_owned()) }]), author_ids :
+                Some(vec!["your author ids".to_owned()]), custom_fields :
+                Some(CustomFields {}), fields : Some(Fields {}), folder_id :
+                Some("your folder id".to_owned()), amino_acids : Some("your amino acids"
+                .to_owned()), schema_id : Some("your schema id".to_owned()), aliases :
+                Some(vec!["your aliases".to_owned()]) } }
             ],
         )
         .send()

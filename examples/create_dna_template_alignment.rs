@@ -8,8 +8,8 @@ async fn main() {
     let args = CreateDnaTemplateAlignmentRequired {
         algorithm: "your algorithm",
         files: vec![::serde_json::json!({})],
-        name: "your name",
         template_sequence_id: "your template sequence id",
+        name: "your name",
     };
     let response = client.create_dna_template_alignment(args).send().await.unwrap();
     println!("{:#?}", response);

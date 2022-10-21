@@ -6,15 +6,15 @@ use benchling::request::UpdateOligoRequired;
 async fn main() {
     let client = BenchlingClient::from_env();
     let args = UpdateOligoRequired {
-        schema_id: "your schema id",
-        name: "your name",
-        oligo_id: "your oligo id",
         aliases: &["your aliases"],
         fields: Fields {},
-        author_ids: &["your author ids"],
         folder_id: "your folder id",
+        author_ids: &["your author ids"],
+        schema_id: "your schema id",
         bases: "your bases",
         custom_fields: CustomFields {},
+        name: "your name",
+        oligo_id: "your oligo id",
     };
     let response = client.update_oligo(args).send().await.unwrap();
     println!("{:#?}", response);

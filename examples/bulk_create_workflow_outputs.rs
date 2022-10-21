@@ -9,9 +9,9 @@ async fn main() {
         .workflow_outputs(
             vec![
                 WorkflowOutputBulkCreate { workflow_output_create : WorkflowOutputCreate
-                { workflow_output_write_base :
-                WorkflowOutputWriteBase(::serde_json::json!({})), workflow_task_id :
-                "your workflow task id".to_owned() } }
+                { workflow_task_id : "your workflow task id".to_owned(),
+                workflow_output_write_base :
+                WorkflowOutputWriteBase(::serde_json::json!({})) } }
             ],
         )
         .send()
