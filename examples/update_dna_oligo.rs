@@ -6,13 +6,13 @@ use benchling::request::UpdateDnaOligoRequired;
 async fn main() {
     let client = BenchlingClient::from_env();
     let args = UpdateDnaOligoRequired {
-        bases: "your bases",
-        oligo_id: "your oligo id",
-        custom_fields: CustomFields {},
         aliases: &["your aliases"],
         folder_id: "your folder id",
         name: "your name",
+        oligo_id: "your oligo id",
+        custom_fields: CustomFields {},
         schema_id: "your schema id",
+        bases: "your bases",
         author_ids: &["your author ids"],
         fields: Fields {},
     };

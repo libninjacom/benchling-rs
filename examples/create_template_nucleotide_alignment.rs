@@ -7,9 +7,9 @@ async fn main() {
     let client = BenchlingClient::from_env();
     let args = CreateTemplateNucleotideAlignmentRequired {
         files: vec![::serde_json::json!({})],
-        template_sequence_id: "your template sequence id",
-        name: "your name",
         algorithm: "your algorithm",
+        name: "your name",
+        template_sequence_id: "your template sequence id",
     };
     let response = client
         .create_template_nucleotide_alignment(args)

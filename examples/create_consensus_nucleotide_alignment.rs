@@ -6,10 +6,10 @@ use benchling::request::CreateConsensusNucleotideAlignmentRequired;
 async fn main() {
     let client = BenchlingClient::from_env();
     let args = CreateConsensusNucleotideAlignmentRequired {
-        algorithm: "your algorithm",
-        files: vec![::serde_json::json!({})],
         new_sequence: ::serde_json::json!({}),
         sequence_id: "your sequence id",
+        algorithm: "your algorithm",
+        files: vec![::serde_json::json!({})],
         name: "your name",
     };
     let response = client

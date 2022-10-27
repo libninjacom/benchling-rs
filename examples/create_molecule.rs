@@ -6,20 +6,20 @@ use benchling::request::CreateMoleculeRequired;
 async fn main() {
     let client = BenchlingClient::from_env();
     let args = CreateMoleculeRequired {
-        author_ids: &["your author ids"],
-        naming_strategy: "your naming strategy",
-        chemical_structure: MoleculeStructure {
-            structure_format: Some(::serde_json::json!({})),
-            value: Some("your value".to_owned()),
-        },
-        name: "your name",
-        aliases: &["your aliases"],
-        schema_id: "your schema id",
-        folder_id: "your folder id",
-        entity_registry_id: "your entity registry id",
         fields: Fields {},
         custom_fields: CustomFields {},
+        author_ids: &["your author ids"],
+        name: "your name",
+        aliases: &["your aliases"],
+        chemical_structure: MoleculeStructure {
+            value: Some("your value".to_owned()),
+            structure_format: Some(::serde_json::json!({})),
+        },
+        folder_id: "your folder id",
+        schema_id: "your schema id",
+        naming_strategy: "your naming strategy",
         registry_id: "your registry id",
+        entity_registry_id: "your entity registry id",
     };
     let response = client.create_molecule(args).send().await.unwrap();
     println!("{:#?}", response);

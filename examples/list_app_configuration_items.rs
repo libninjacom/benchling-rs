@@ -1,19 +1,17 @@
 #![allow(unused_imports)]
 use benchling::BenchlingClient;
 use benchling::model::*;
-use benchling::request::CreateBlobRequired;
 #[tokio::main]
 async fn main() {
     let client = BenchlingClient::from_env();
-    let args = CreateBlobRequired {
-        data64: "your data 64",
-        md5: "your md 5",
-        name: "your name",
-        type_: "your type",
-    };
     let response = client
-        .create_blob(args)
-        .mime_type("your mime type")
+        .list_app_configuration_items()
+        .next_token("your next token")
+        .page_size(1)
+        .modified_at("your modified at")
+        .app_id("your app id")
+        .ids("your ids")
+        .sort("your sort")
         .send()
         .await
         .unwrap();

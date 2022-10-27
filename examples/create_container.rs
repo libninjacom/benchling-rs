@@ -8,8 +8,8 @@ async fn main() {
     let args = CreateContainerRequired {
         fields: Fields {},
         barcode: "your barcode",
-        name: "your name",
         parent_storage_id: "your parent storage id",
+        name: "your name",
         schema_id: "your schema id",
     };
     let response = client

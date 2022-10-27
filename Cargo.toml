@@ -1,7 +1,7 @@
 [package]
 name = "benchling"
 edition = "2021"
-version = "2.0.0"
+version = "3.0.0"
 description = "Benchling client, generated from the OpenAPI spec."
 homepage = "https://github.com/libninjacom/benchling-rs"
 documentation = "https://docs.rs/benchling"
@@ -325,6 +325,14 @@ edition = "2021"
 required-features = []
 
 [[example]]
+path = "examples/bulk_create_app_configuration_items.rs"
+name = "bulk_create_app_configuration_items"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
 path = "examples/bulk_create_containers.rs"
 name = "bulk_create_containers"
 plugin = false
@@ -565,6 +573,14 @@ edition = "2021"
 required-features = []
 
 [[example]]
+path = "examples/bulk_update_app_configuration_items.rs"
+name = "bulk_update_app_configuration_items"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
 path = "examples/bulk_update_containers.rs"
 name = "bulk_update_containers"
 plugin = false
@@ -695,6 +711,14 @@ required-features = []
 [[example]]
 path = "examples/create_aa_sequence.rs"
 name = "create_aa_sequence"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/create_app_configuration_item.rs"
+name = "create_app_configuration_item"
 plugin = false
 proc-macro = false
 edition = "2021"
@@ -1047,6 +1071,14 @@ required-features = []
 [[example]]
 path = "examples/get_aa_sequence.rs"
 name = "get_aa_sequence"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/get_app_configuration_item_by_id.rs"
+name = "get_app_configuration_item_by_id"
 plugin = false
 proc-macro = false
 edition = "2021"
@@ -1503,6 +1535,14 @@ required-features = []
 [[example]]
 path = "examples/list_aa_sequences.rs"
 name = "list_aa_sequences"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/list_app_configuration_items.rs"
+name = "list_app_configuration_items"
 plugin = false
 proc-macro = false
 edition = "2021"
@@ -2367,6 +2407,14 @@ required-features = []
 [[example]]
 path = "examples/update_aa_sequence.rs"
 name = "update_aa_sequence"
+plugin = false
+proc-macro = false
+edition = "2021"
+required-features = []
+
+[[example]]
+path = "examples/update_app_configuration_item.rs"
+name = "update_app_configuration_item"
 plugin = false
 proc-macro = false
 edition = "2021"

@@ -191,6 +191,72 @@ Bulk Create AA sequences. Limit of 1000 AA Sequences per request.*/
             aa_sequence_ids: aa_sequence_ids.iter().map(|&x| x.to_owned()).collect(),
         }
     }
+    ///Get app configuration items
+    pub fn list_app_configuration_items(
+        &self,
+    ) -> request::ListAppConfigurationItemsRequest {
+        request::ListAppConfigurationItemsRequest {
+            client: &self,
+            next_token: None,
+            page_size: None,
+            modified_at: None,
+            app_id: None,
+            ids: None,
+            sort: None,
+        }
+    }
+    ///Create app configuration item
+    pub fn create_app_configuration_item(
+        &self,
+    ) -> request::CreateAppConfigurationItemRequest {
+        request::CreateAppConfigurationItemRequest {
+            client: &self,
+        }
+    }
+    ///Get app configuration item
+    pub fn get_app_configuration_item_by_id(
+        &self,
+        item_id: &str,
+    ) -> request::GetAppConfigurationItemByIdRequest {
+        request::GetAppConfigurationItemByIdRequest {
+            client: &self,
+            item_id: item_id.to_owned(),
+        }
+    }
+    ///Update app configuration item
+    pub fn update_app_configuration_item(
+        &self,
+        item_id: &str,
+    ) -> request::UpdateAppConfigurationItemRequest {
+        request::UpdateAppConfigurationItemRequest {
+            client: &self,
+            item_id: item_id.to_owned(),
+        }
+    }
+    /**Bulk Create app configuration items. Limit of 1000 App Config Items per request.
+
+Bulk Create app configuration items*/
+    pub fn bulk_create_app_configuration_items(
+        &self,
+        app_configuration_items: Vec<AppConfigItemCreate>,
+    ) -> request::BulkCreateAppConfigurationItemsRequest {
+        request::BulkCreateAppConfigurationItemsRequest {
+            client: &self,
+            app_configuration_items,
+        }
+    }
+    /**Bulk Update app configuration items. Limit of 1000 App Config Items per request.
+
+Bulk Update app configuration items*/
+    pub fn bulk_update_app_configuration_items(
+        &self,
+        app_configuration_items: Vec<AppConfigItemBulkUpdate>,
+    ) -> request::BulkUpdateAppConfigurationItemsRequest {
+        request::BulkUpdateAppConfigurationItemsRequest {
+            client: &self,
+            app_configuration_items,
+        }
+    }
     ///List apps
     pub fn list_benchling_apps(&self) -> request::ListBenchlingAppsRequest {
         request::ListBenchlingAppsRequest {
