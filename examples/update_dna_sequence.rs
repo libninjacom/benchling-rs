@@ -6,40 +6,41 @@ use benchling::request::UpdateDnaSequenceRequired;
 async fn main() {
     let client = BenchlingClient::from_env();
     let args = UpdateDnaSequenceRequired {
-        custom_fields: CustomFields {},
-        primers: vec![
-            Primer { end : Some(1), overhang_length : Some(1), oligo_id :
-            Some("your oligo id".to_owned()), bind_position : Some(1), color :
-            Some("your color".to_owned()), bases : Some("your bases".to_owned()), name :
-            Some("your name".to_owned()), start : Some(1), strand : Some(1) }
-        ],
-        schema_id: "your schema id",
-        fields: Fields {},
-        bases: "your bases",
         translations: vec![
-            Translation { amino_acids : "your amino acids".to_owned(),
-            sequence_feature_base : SequenceFeatureBase { color : Some("your color"
-            .to_owned()), name : Some("your name".to_owned()), custom_fields :
-            Some(vec![SequenceFeatureCustomField { name : Some("your name".to_owned()),
-            value : Some("your value".to_owned()) }]), notes : Some("your notes"
-            .to_owned()) }, end : 1, genetic_code : "your genetic code".to_owned(),
-            regions : vec![::serde_json::json!({})], strand : 1, start : 1 }
+            Translation { sequence_feature_base : SequenceFeatureBase { color :
+            Some("your color".to_owned()), custom_fields :
+            Some(vec![SequenceFeatureCustomField { value : Some("your value".to_owned()),
+            name : Some("your name".to_owned()) }]), notes : Some("your notes"
+            .to_owned()), name : Some("your name".to_owned()) }, end : 1, strand : 1,
+            genetic_code : "your genetic code".to_owned(), regions :
+            vec![::serde_json::json!({})], start : 1, amino_acids : "your amino acids"
+            .to_owned() }
         ],
         entity_registry_id: "your entity registry id",
-        aliases: &["your aliases"],
-        folder_id: "your folder id",
-        is_circular: true,
+        name: "your name",
+        author_ids: &["your author ids"],
+        primers: vec![
+            Primer { name : Some("your name".to_owned()), bases : Some("your bases"
+            .to_owned()), strand : Some(1), oligo_id : Some("your oligo id".to_owned()),
+            end : Some(1), color : Some("your color".to_owned()), bind_position :
+            Some(1), start : Some(1), overhang_length : Some(1) }
+        ],
+        bases: "your bases",
         annotations: vec![
-            DnaAnnotation { end : 1, strand : 1, sequence_feature_base :
-            SequenceFeatureBase { color : Some("your color".to_owned()), name :
-            Some("your name".to_owned()), custom_fields :
-            Some(vec![SequenceFeatureCustomField { name : Some("your name".to_owned()),
-            value : Some("your value".to_owned()) }]), notes : Some("your notes"
-            .to_owned()) }, start : 1, type_ : "your type".to_owned() }
+            DnaAnnotation { end : 1, strand : 1, type_ : "your type".to_owned(),
+            sequence_feature_base : SequenceFeatureBase { color : Some("your color"
+            .to_owned()), custom_fields : Some(vec![SequenceFeatureCustomField { value :
+            Some("your value".to_owned()), name : Some("your name".to_owned()) }]), notes
+            : Some("your notes".to_owned()), name : Some("your name".to_owned()) }, start
+            : 1 }
         ],
         dna_sequence_id: "your dna sequence id",
-        author_ids: &["your author ids"],
-        name: "your name",
+        aliases: &["your aliases"],
+        custom_fields: CustomFields {},
+        fields: Fields {},
+        folder_id: "your folder id",
+        is_circular: true,
+        schema_id: "your schema id",
     };
     let response = client.update_dna_sequence(args).send().await.unwrap();
     println!("{:#?}", response);

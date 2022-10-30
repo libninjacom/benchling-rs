@@ -6,22 +6,22 @@ use benchling::request::CreateAaSequenceRequired;
 async fn main() {
     let client = BenchlingClient::from_env();
     let args = CreateAaSequenceRequired {
-        aliases: &["your aliases"],
-        fields: Fields {},
-        folder_id: "your folder id",
         name: "your name",
         entity_registry_id: "your entity registry id",
-        naming_strategy: "your naming strategy",
-        amino_acids: "your amino acids",
-        schema_id: "your schema id",
         registry_id: "your registry id",
-        custom_fields: CustomFields {},
+        amino_acids: "your amino acids",
+        naming_strategy: "your naming strategy",
+        fields: Fields {},
+        folder_id: "your folder id",
+        schema_id: "your schema id",
+        aliases: &["your aliases"],
         annotations: vec![
-            AaAnnotation { start : Some(1), type_ : Some("your type".to_owned()), end :
-            Some(1), id : Some("your id".to_owned()), name : Some("your name"
-            .to_owned()), color : Some("your color".to_owned()) }
+            AaAnnotation { end : Some(1), color : Some("your color".to_owned()), id :
+            Some("your id".to_owned()), name : Some("your name".to_owned()), start :
+            Some(1), type_ : Some("your type".to_owned()) }
         ],
         author_ids: &["your author ids"],
+        custom_fields: CustomFields {},
     };
     let response = client.create_aa_sequence(args).send().await.unwrap();
     println!("{:#?}", response);

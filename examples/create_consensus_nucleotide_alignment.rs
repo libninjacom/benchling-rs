@@ -8,8 +8,8 @@ async fn main() {
     let args = CreateConsensusNucleotideAlignmentRequired {
         new_sequence: ::serde_json::json!({}),
         sequence_id: "your sequence id",
-        algorithm: "your algorithm",
         files: vec![::serde_json::json!({})],
+        algorithm: "your algorithm",
         name: "your name",
     };
     let response = client

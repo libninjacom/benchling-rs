@@ -6,19 +6,19 @@ use benchling::request::UpdateMoleculeRequired;
 async fn main() {
     let client = BenchlingClient::from_env();
     let args = UpdateMoleculeRequired {
-        entity_registry_id: "your entity registry id",
+        fields: Fields {},
+        molecule_id: "your molecule id",
+        custom_fields: CustomFields {},
         name: "your name",
         schema_id: "your schema id",
         aliases: &["your aliases"],
-        author_ids: &["your author ids"],
         chemical_structure: MoleculeStructure {
             value: Some("your value".to_owned()),
             structure_format: Some(::serde_json::json!({})),
         },
-        custom_fields: CustomFields {},
-        fields: Fields {},
         folder_id: "your folder id",
-        molecule_id: "your molecule id",
+        author_ids: &["your author ids"],
+        entity_registry_id: "your entity registry id",
     };
     let response = client.update_molecule(args).send().await.unwrap();
     println!("{:#?}", response);

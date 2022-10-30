@@ -7,8 +7,8 @@ async fn main() {
     let response = client
         .create_batch()
         .default_concentration(DefaultConcentrationSummary {
-            units: Some("your units".to_owned()),
             value: Some(1.0),
+            units: Some("your units".to_owned()),
         })
         .entity_id("your entity id")
         .fields(Fields {})

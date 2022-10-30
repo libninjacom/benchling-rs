@@ -6,17 +6,17 @@ use benchling::request::CreateDnaOligoRequired;
 async fn main() {
     let client = BenchlingClient::from_env();
     let args = CreateDnaOligoRequired {
-        author_ids: &["your author ids"],
-        custom_fields: CustomFields {},
-        schema_id: "your schema id",
-        aliases: &["your aliases"],
         name: "your name",
-        bases: "your bases",
-        registry_id: "your registry id",
+        schema_id: "your schema id",
         fields: Fields {},
+        author_ids: &["your author ids"],
         folder_id: "your folder id",
         entity_registry_id: "your entity registry id",
         naming_strategy: "your naming strategy",
+        custom_fields: CustomFields {},
+        registry_id: "your registry id",
+        aliases: &["your aliases"],
+        bases: "your bases",
     };
     let response = client.create_dna_oligo(args).send().await.unwrap();
     println!("{:#?}", response);

@@ -8,8 +8,8 @@ async fn main() {
     let response = client
         .update_batch(batch_id)
         .default_concentration(DefaultConcentrationSummary {
-            units: Some("your units".to_owned()),
             value: Some(1.0),
+            units: Some("your units".to_owned()),
         })
         .fields(Fields {})
         .send()

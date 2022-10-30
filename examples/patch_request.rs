@@ -7,14 +7,14 @@ async fn main() {
     let client = BenchlingClient::from_env();
     let args = PatchRequestRequired {
         fields: Fields {},
-        project_id: "your project id",
         sample_groups: vec![
             RequestSampleGroupCreate { samples : RequestSampleGroupSamples {} }
         ],
-        request_id: "your request id",
-        scheduled_on: "your scheduled on",
-        request_status: "your request status",
         assignees: vec![::serde_json::json!({})],
+        request_status: "your request status",
+        scheduled_on: "your scheduled on",
+        request_id: "your request id",
+        project_id: "your project id",
     };
     let response = client
         .patch_request(args)

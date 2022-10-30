@@ -6,18 +6,18 @@ use benchling::request::UpdateContainerRequired;
 async fn main() {
     let client = BenchlingClient::from_env();
     let args = UpdateContainerRequired {
-        quantity: ContainerQuantity {
-            value: Some(1.0),
-            units: Some("your units".to_owned()),
-        },
-        name: "your name",
-        parent_storage_id: "your parent storage id",
         volume: DeprecatedContainerVolumeForInput {
-            value: Some(1.0),
             units: Some("your units".to_owned()),
+            value: Some(1.0),
         },
-        container_id: "your container id",
+        quantity: ContainerQuantity {
+            units: Some("your units".to_owned()),
+            value: Some(1.0),
+        },
         fields: Fields {},
+        parent_storage_id: "your parent storage id",
+        name: "your name",
+        container_id: "your container id",
     };
     let response = client
         .update_container(args)

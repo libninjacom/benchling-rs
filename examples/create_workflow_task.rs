@@ -6,10 +6,10 @@ use benchling::request::CreateWorkflowTaskRequired;
 async fn main() {
     let client = BenchlingClient::from_env();
     let args = CreateWorkflowTaskRequired {
-        workflow_task_group_id: "your workflow task group id",
         fields: Fields {},
-        scheduled_on: "your scheduled on",
         assignee_id: "your assignee id",
+        workflow_task_group_id: "your workflow task group id",
+        scheduled_on: "your scheduled on",
     };
     let response = client.create_workflow_task(args).send().await.unwrap();
     println!("{:#?}", response);
