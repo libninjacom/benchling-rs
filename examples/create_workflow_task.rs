@@ -8,8 +8,8 @@ async fn main() {
     let args = CreateWorkflowTaskRequired {
         fields: Fields {},
         assignee_id: "your assignee id",
-        workflow_task_group_id: "your workflow task group id",
         scheduled_on: "your scheduled on",
+        workflow_task_group_id: "your workflow task group id",
     };
     let response = client.create_workflow_task(args).send().await.unwrap();
     println!("{:#?}", response);

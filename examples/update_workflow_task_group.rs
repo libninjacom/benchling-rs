@@ -6,9 +6,9 @@ use benchling::request::UpdateWorkflowTaskGroupRequired;
 async fn main() {
     let client = BenchlingClient::from_env();
     let args = UpdateWorkflowTaskGroupRequired {
-        watcher_ids: &["your watcher ids"],
-        workflow_task_group_id: "your workflow task group id",
         folder_id: "your folder id",
+        workflow_task_group_id: "your workflow task group id",
+        watcher_ids: &["your watcher ids"],
         name: "your name",
     };
     let response = client.update_workflow_task_group(args).send().await.unwrap();

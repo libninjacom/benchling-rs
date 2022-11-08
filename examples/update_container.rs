@@ -10,12 +10,12 @@ async fn main() {
             units: Some("your units".to_owned()),
             value: Some(1.0),
         },
+        fields: Fields {},
+        parent_storage_id: "your parent storage id",
         quantity: ContainerQuantity {
             units: Some("your units".to_owned()),
             value: Some(1.0),
         },
-        fields: Fields {},
-        parent_storage_id: "your parent storage id",
         name: "your name",
         container_id: "your container id",
     };

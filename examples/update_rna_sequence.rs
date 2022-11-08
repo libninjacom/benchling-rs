@@ -8,39 +8,38 @@ async fn main() {
     let args = UpdateRnaSequenceRequired {
         is_circular: true,
         primers: vec![
-            Primer { name : Some("your name".to_owned()), bases : Some("your bases"
-            .to_owned()), strand : Some(1), oligo_id : Some("your oligo id".to_owned()),
-            end : Some(1), color : Some("your color".to_owned()), bind_position :
-            Some(1), start : Some(1), overhang_length : Some(1) }
+            Primer { oligo_id : Some("your oligo id".to_owned()), strand : Some(1), end :
+            Some(1), bases : Some("your bases".to_owned()), start : Some(1),
+            bind_position : Some(1), color : Some("your color".to_owned()),
+            overhang_length : Some(1), name : Some("your name".to_owned()) }
         ],
-        schema_id: "your schema id",
-        entity_registry_id: "your entity registry id",
-        annotations: vec![
-            RnaAnnotation { strand : 1, sequence_feature_base : SequenceFeatureBase {
-            color : Some("your color".to_owned()), custom_fields :
-            Some(vec![SequenceFeatureCustomField { value : Some("your value".to_owned()),
-            name : Some("your name".to_owned()) }]), notes : Some("your notes"
-            .to_owned()), name : Some("your name".to_owned()) }, type_ : "your type"
-            .to_owned(), end : 1, start : 1 }
-        ],
+        bases: "your bases",
+        folder_id: "your folder id",
         translations: vec![
-            Translation { sequence_feature_base : SequenceFeatureBase { color :
-            Some("your color".to_owned()), custom_fields :
-            Some(vec![SequenceFeatureCustomField { value : Some("your value".to_owned()),
-            name : Some("your name".to_owned()) }]), notes : Some("your notes"
-            .to_owned()), name : Some("your name".to_owned()) }, end : 1, strand : 1,
-            genetic_code : "your genetic code".to_owned(), regions :
-            vec![::serde_json::json!({})], start : 1, amino_acids : "your amino acids"
-            .to_owned() }
+            Translation { start : 1, strand : 1, amino_acids : "your amino acids"
+            .to_owned(), genetic_code : "your genetic code".to_owned(), regions :
+            vec![::serde_json::json!({})], end : 1, sequence_feature_base :
+            SequenceFeatureBase { custom_fields : Some(vec![SequenceFeatureCustomField {
+            name : Some("your name".to_owned()), value : Some("your value".to_owned())
+            }]), color : Some("your color".to_owned()), name : Some("your name"
+            .to_owned()), notes : Some("your notes".to_owned()) } }
         ],
         aliases: &["your aliases"],
-        bases: "your bases",
+        entity_registry_id: "your entity registry id",
         author_ids: &["your author ids"],
-        name: "your name",
-        rna_sequence_id: "your rna sequence id",
-        custom_fields: CustomFields {},
         fields: Fields {},
-        folder_id: "your folder id",
+        custom_fields: CustomFields {},
+        name: "your name",
+        schema_id: "your schema id",
+        annotations: vec![
+            RnaAnnotation { end : 1, start : 1, strand : 1, sequence_feature_base :
+            SequenceFeatureBase { custom_fields : Some(vec![SequenceFeatureCustomField {
+            name : Some("your name".to_owned()), value : Some("your value".to_owned())
+            }]), color : Some("your color".to_owned()), name : Some("your name"
+            .to_owned()), notes : Some("your notes".to_owned()) }, type_ : "your type"
+            .to_owned() }
+        ],
+        rna_sequence_id: "your rna sequence id",
     };
     let response = client.update_rna_sequence(args).send().await.unwrap();
     println!("{:#?}", response);

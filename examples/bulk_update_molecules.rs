@@ -8,16 +8,16 @@ async fn main() {
         .bulk_update_molecules()
         .molecules(
             vec![
-                MoleculeBulkUpdate { molecule_update : MoleculeUpdate {
-                entity_registry_id : "your entity registry id".to_owned(),
-                molecule_base_request : MoleculeBaseRequest { schema_id :
-                Some("your schema id".to_owned()), aliases : Some(vec!["your aliases"
-                .to_owned()]), custom_fields : Some(CustomFields {}), chemical_structure
-                : Some(MoleculeStructure { value : Some("your value".to_owned()),
-                structure_format : Some(::serde_json::json!({})) }), folder_id :
-                Some("your folder id".to_owned()), name : Some("your name".to_owned()),
-                fields : Some(Fields {}), author_ids : Some(vec!["your author ids"
-                .to_owned()]) } }, id : "your id".to_owned() }
+                MoleculeBulkUpdate { id : "your id".to_owned(), molecule_update :
+                MoleculeUpdate { molecule_base_request : MoleculeBaseRequest { aliases :
+                Some(vec!["your aliases".to_owned()]), name : Some("your name"
+                .to_owned()), fields : Some(Fields {}), schema_id : Some("your schema id"
+                .to_owned()), author_ids : Some(vec!["your author ids".to_owned()]),
+                chemical_structure : Some(MoleculeStructure { structure_format :
+                Some(::serde_json::json!({})), value : Some("your value".to_owned()) }),
+                custom_fields : Some(CustomFields {}), folder_id : Some("your folder id"
+                .to_owned()) }, entity_registry_id : "your entity registry id".to_owned()
+                } }
             ],
         )
         .send()

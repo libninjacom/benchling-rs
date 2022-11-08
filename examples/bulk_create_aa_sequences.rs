@@ -10,19 +10,20 @@ async fn main() {
             vec![
                 AaSequenceBulkCreate { aa_sequence_create : AaSequenceCreate {
                 aa_sequence_base_request_for_create : AaSequenceBaseRequestForCreate {
-                aa_sequence_base_request : AaSequenceBaseRequest { annotations :
-                Some(vec![AaAnnotation { end : Some(1), color : Some("your color"
-                .to_owned()), id : Some("your id".to_owned()), name : Some("your name"
-                .to_owned()), start : Some(1), type_ : Some("your type".to_owned()) }]),
-                folder_id : Some("your folder id".to_owned()), aliases :
-                Some(vec!["your aliases".to_owned()]), custom_fields : Some(CustomFields
-                {}), fields : Some(Fields {}), schema_id : Some("your schema id"
-                .to_owned()), author_ids : Some(vec!["your author ids".to_owned()]), name
-                : Some("your name".to_owned()), amino_acids : Some("your amino acids"
-                .to_owned()) } }, create_entity_into_registry : CreateEntityIntoRegistry
-                { naming_strategy : Some("your naming strategy".to_owned()),
-                entity_registry_id : Some("your entity registry id".to_owned()),
-                folder_id : Some("your folder id".to_owned()), registry_id :
+                aa_sequence_base_request : AaSequenceBaseRequest { author_ids :
+                Some(vec!["your author ids".to_owned()]), aliases :
+                Some(vec!["your aliases".to_owned()]), amino_acids :
+                Some("your amino acids".to_owned()), custom_fields : Some(CustomFields
+                {}), name : Some("your name".to_owned()), fields : Some(Fields {}),
+                annotations : Some(vec![AaAnnotation { name : Some("your name"
+                .to_owned()), color : Some("your color".to_owned()), type_ :
+                Some("your type".to_owned()), id : Some("your id".to_owned()), end :
+                Some(1), start : Some(1) }]), folder_id : Some("your folder id"
+                .to_owned()), schema_id : Some("your schema id".to_owned()) } },
+                create_entity_into_registry : CreateEntityIntoRegistry { folder_id :
+                Some("your folder id".to_owned()), naming_strategy :
+                Some("your naming strategy".to_owned()), entity_registry_id :
+                Some("your entity registry id".to_owned()), registry_id :
                 Some("your registry id".to_owned()) } } }
             ],
         )

@@ -14,8 +14,8 @@ async fn main() {
         .fields(Fields {})
         .initial_tables(
             vec![
-                InitialTable { template_table_id : Some("your template table id"
-                .to_owned()), csv_data : Some("your csv data".to_owned()) }
+                InitialTable { csv_data : Some("your csv data".to_owned()),
+                template_table_id : Some("your template table id".to_owned()) }
             ],
         )
         .schema_id("your schema id")

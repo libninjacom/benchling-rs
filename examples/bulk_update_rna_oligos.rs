@@ -9,13 +9,13 @@ async fn main() {
         .rna_oligos(
             vec![
                 RnaOligoBulkUpdate { rna_oligo_update : RnaOligoUpdate { oligo_update :
-                OligoUpdate { oligo_base_request : OligoBaseRequest { bases :
-                Some("your bases".to_owned()), name : Some("your name".to_owned()),
-                schema_id : Some("your schema id".to_owned()), fields : Some(Fields {}),
-                author_ids : Some(vec!["your author ids".to_owned()]), folder_id :
-                Some("your folder id".to_owned()), aliases : Some(vec!["your aliases"
-                .to_owned()]), custom_fields : Some(CustomFields {}) } } }, id :
-                "your id".to_owned() }
+                OligoUpdate { oligo_base_request : OligoBaseRequest { name :
+                Some("your name".to_owned()), author_ids : Some(vec!["your author ids"
+                .to_owned()]), fields : Some(Fields {}), folder_id :
+                Some("your folder id".to_owned()), schema_id : Some("your schema id"
+                .to_owned()), bases : Some("your bases".to_owned()), aliases :
+                Some(vec!["your aliases".to_owned()]), custom_fields : Some(CustomFields
+                {}) } } }, id : "your id".to_owned() }
             ],
         )
         .send()

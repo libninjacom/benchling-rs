@@ -9,7 +9,7 @@ async fn main() {
         .complete_multipart_blob(blob_id)
         .parts(
             vec![
-                BlobPart { e_tag : Some("your e tag".to_owned()), part_number : Some(1) }
+                BlobPart { part_number : Some(1), e_tag : Some("your e tag".to_owned()) }
             ],
         )
         .send()

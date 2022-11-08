@@ -6,11 +6,11 @@ use benchling::request::CreateContainerRequired;
 async fn main() {
     let client = BenchlingClient::from_env();
     let args = CreateContainerRequired {
-        name: "your name",
-        schema_id: "your schema id",
-        barcode: "your barcode",
-        fields: Fields {},
         parent_storage_id: "your parent storage id",
+        fields: Fields {},
+        barcode: "your barcode",
+        schema_id: "your schema id",
+        name: "your name",
     };
     let response = client
         .create_container(args)

@@ -7,9 +7,9 @@ async fn main() {
     let client = BenchlingClient::from_env();
     let args = CreateConsensusNucleotideAlignmentRequired {
         new_sequence: ::serde_json::json!({}),
+        algorithm: "your algorithm",
         sequence_id: "your sequence id",
         files: vec![::serde_json::json!({})],
-        algorithm: "your algorithm",
         name: "your name",
     };
     let response = client

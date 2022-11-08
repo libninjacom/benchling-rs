@@ -6,17 +6,17 @@ use benchling::request::CreateRnaOligoRequired;
 async fn main() {
     let client = BenchlingClient::from_env();
     let args = CreateRnaOligoRequired {
-        custom_fields: CustomFields {},
-        naming_strategy: "your naming strategy",
+        registry_id: "your registry id",
         bases: "your bases",
-        entity_registry_id: "your entity registry id",
         fields: Fields {},
-        name: "your name",
-        schema_id: "your schema id",
         folder_id: "your folder id",
         author_ids: &["your author ids"],
-        registry_id: "your registry id",
+        name: "your name",
+        naming_strategy: "your naming strategy",
         aliases: &["your aliases"],
+        schema_id: "your schema id",
+        custom_fields: CustomFields {},
+        entity_registry_id: "your entity registry id",
     };
     let response = client.create_rna_oligo(args).send().await.unwrap();
     println!("{:#?}", response);

@@ -6,13 +6,13 @@ use benchling::request::CreateRequestRequired;
 async fn main() {
     let client = BenchlingClient::from_env();
     let args = CreateRequestRequired {
+        scheduled_on: "your scheduled on",
         schema_id: "your schema id",
-        project_id: "your project id",
         fields: Fields {},
         sample_groups: vec![
             RequestSampleGroupCreate { samples : RequestSampleGroupSamples {} }
         ],
-        scheduled_on: "your scheduled on",
+        project_id: "your project id",
         assignees: vec![::serde_json::json!({})],
     };
     let response = client
